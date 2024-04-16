@@ -1,2 +1,4 @@
 gobuster dir -w /usr/share/wordlists/dirb/big.txt -u <url>  -k
 gobuster vhost -w /usr/share/wordlists/dirb/big.txt -u <url> -k
+dirb <url> <dictionary>
+ffuf -u <url> -w <diccionario>
