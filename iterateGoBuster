@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Verificar si existe el archivo
+if [ "$#" -ne 1 ]; then
+    echo "Uso: $0 targets"
+    exit 1
+fi
+
+# guarda el nombre de los objetivos
+objetivos=$1
+
+# Verificar si el archivo existe
+if [ ! -f "$objetivos" ]; then
+    echo "El archivo $objetivos no existe."
+    exit 1
+fi
+
+# Ejecutar gobuster para cada target en el archivo
+while IFS= read -r objetivo; do
+    echo "Ejecutando gobuster para el objetivo: $objetivo"
+    gobuster dir -w /usr/share/wordlists/dirb/big.txt -u "$objetivo" 
+    
+    echo "Finalizado para el objetivo: $objetivo"
+done < "$objetivos"
+
+echo "Todos los targets han sido procesados."
