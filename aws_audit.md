@@ -37,6 +37,13 @@ Politica CONFIG
 
  ![image](https://github.com/user-attachments/assets/26bff390-abb6-4532-ac21-ba3178b36284)
 
+
+
+https://docs.cobalt.io/methodologies/cloud/
+
+https://docs.cobalt.io/methodologies/cloud/
+
+
 	]
 }
 
