@@ -15,3 +15,24 @@ aws lambda get-policy --function-name "prepaudit-prod-cron_difusion-343a" --outp
 aws lambda get-function --function-name prepaudit-prod-procesamiento-imagenes-ecr-343a  --region us-east-1
 aws s3 cp s3://343a-cf-resources/function/ . --recursive
 
+
+
+Politica CONFIG
+
+{
+	“Version”: “2012-10-17",
+	“Statement”: [
+		{
+			“Effect”: “Allow”,
+			“Action”: “iam:PassRole”,
+			“Resource”: “arn:aws:iam::239286574428:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig”
+		},
+		{
+            “Effect”: “Allow”,
+            “Action”: “config:StartConfigurationRecorder”,
+            “Resource”: “*”
+        }
+	]
+}
+
+
