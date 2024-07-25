@@ -32,6 +32,11 @@ Politica CONFIG
             “Action”: “config:StartConfigurationRecorder”,
             “Resource”: “*”
         }
+
+
+
+ ![image](https://github.com/user-attachments/assets/26bff390-abb6-4532-ac21-ba3178b36284)
+
 	]
 }
 
