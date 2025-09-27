@@ -1,0 +1,8 @@
+Enumerar smb abierto
+nmap -p 139,445 --open -oG - 172.16.21.0/16 | awk '/139\/open|445\/open/ {print $2}' > hosts.txt
+
+Find strings windows (LoL)
+findstr /m /s /i "string" *.bat
+
+Shares de red
+cme smb 172.16.21.0/24 -u '' -p '' --shares
